@@ -176,7 +176,7 @@ client  →  <domain>.app  →  x.x.x.x (TIM public)
         →  nginx → Node
 ```
  
-**Dynamic IP problem.** The TIM line uses PPPoE with a dynamic public IP. Solved with the `os-ddclient` plugin on OPNsense, configured to talk to the Cloudflare API v4 with a scoped API token (`Edit zone DNS` only on `edilgreen.app`, no other zones). Check IP method: `cloudflare-ipv4`, which avoids the trap of reading the WAN interface IP — useless when the firewall sits behind another NAT.
+**Dynamic IP problem.** The TIM line uses PPPoE with a dynamic public IP. Solved with the `os-ddclient` plugin on OPNsense, configured to talk to the Cloudflare API v4 with a scoped API token (`Edit zone DNS` only on `<domain>.app`, no other zones). Check IP method: `cloudflare-ipv4`, which avoids the trap of reading the WAN interface IP — useless when the firewall sits behind another NAT.
  
 **Cert.** Let's Encrypt via certbot.
  
